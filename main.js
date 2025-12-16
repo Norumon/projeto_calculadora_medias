@@ -61,7 +61,7 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2); //esse .toFixed evita que os numeros superem duas casa
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 //aqui é feito a inserção dos resultados no HTML também calculando e exibindo a mensagem de aprovado ou reprovado
 //novamente usando o >= diz que se a média for maior ou igual a notaMinima ?=if aprovado :else reprovado
